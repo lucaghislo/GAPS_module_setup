@@ -24,12 +24,12 @@ keysight_iset_ch4 = 0.05
 caen_vmax = 250
 caen_imax = 10 
 caen_channel = 7
-caen_rup = 0
-caen_rdwn = 0
-caen_trip = 0
+caen_rup = 250
+caen_rdwn = 250
+caen_trip = 10
 caen_imrange = 'HIGH'
-caen_DELAY = 0
-caen_DELAY_SETTLING = 0
+caen_DELAY = 1
+caen_DELAY_SETTLING = 1
 
 # Keysight N6705C setting
 keysight = rm.open_resource('USB0::10893::3842::MY56006348::0::INSTR')

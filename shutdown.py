@@ -7,7 +7,7 @@ import pyvisa
 rm = pyvisa.ResourceManager()
 
 # delay between deactivations
-delay = 15
+delay = 20
 
 # CONFIGURATION - CAEN HiVolta
 caen_channel = 7

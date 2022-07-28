@@ -13,6 +13,7 @@ DELAY = 0.3
 DELAY_SETTLING = 5
 
 channel = 7
+onoff = 'OFF'
 vmax = 250 # voltage
 imax = 10 # current
 rup = 10
@@ -38,8 +39,8 @@ print("    Ramp up: " + caen.query(f'$CMD:MON,CH:{channel},PAR:RUP',DELAY), end=
 print("  Ramp down: " + caen.query(f'$CMD:MON,CH:{channel},PAR:RDWN',DELAY), end='')
 print("  Trip time: " + caen.query(f'$CMD:MON,CH:{channel},PAR:TRIP',DELAY), end='')
 
-caen.query(f'$CMD:SET,CH:{channel},PAR:OFF',DELAY)
-response = caen.query(f'$CMD:MON,CH:{channel},PAR:VMON',DELAY)
-print(f'\nCurrent voltage: {response}', end='')
+caen.query(f'$CMD:SET,CH:{channel},PAR:{onoff}',DELAY)
+print("\nReadout voltage: " + caen.query(f'$CMD:MON,CH:{channel},PAR:VMON',DELAY))
+print("Readout current: " + caen.query(f'$CMD:MON,CH:{channel},PAR:IMON',DELAY))
 
 #caen.query(f'$CMD:SET,CH:0,PAR:OFF',DELAY)

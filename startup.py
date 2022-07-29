@@ -21,7 +21,7 @@ keysight_vset_ch4 = 3.3
 keysight_iset_ch4 = 0.05
 
 # CONFIGURATION - CAEN HiVolta
-caen_vmax = 250
+caen_vmax = 25
 caen_imax = 10 
 caen_channel = 7
 caen_rup = 250
